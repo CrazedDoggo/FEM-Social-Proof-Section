@@ -25,14 +25,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](design/finished-section.jpg)
 
 ### Links
 
 - Solution URL: [https://github.com/CrazedDoggo/FEM-Social-Proof-Section](https://github.com/CrazedDoggo/FEM-Social-Proof-Section)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://crazeddoggo.github.io/FEM-Social-Proof-Section/](https://crazeddoggo.github.io/FEM-Social-Proof-Section/)
 
 ## My process
+
+I began with styling individual components and setting up my typography before moving onto the layout. I used a mixture of flexbox and grid for this, using flexbox for more individual elements such as the stars or lists while I used grid for the main layout or where I saw fit.
+
+I utilized transforms to adjust the cards as shown in the design file. This maintained the layout that I built while still moving the elements in a non-disruptive way.
 
 ### Built with
 
@@ -40,17 +44,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow~
-
-### What I learned
-
-
-### Continued development
-
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- Mobile-first workflow
 
 ## Author
 
