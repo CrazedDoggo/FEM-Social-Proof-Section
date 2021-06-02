@@ -26,7 +26,6 @@
 }
 
 body {
-    padding: 4em 1em;
     min-height: 100vh;
     font-size: .9375rem;
     line-height: 1.5;
@@ -35,10 +34,14 @@ body {
     background-color: var(--white);
     color: var(--dark-grayish-magenta);
 
+    position: relative;
     display: grid;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+}
+
+.wrapper {
+    padding: 4em 1em;
 }
 
 ul {
@@ -49,7 +52,25 @@ img {
     max-width: 100%;
 }
 
+/* BACKGROUND */
+
+.bg-desktop {
+    display: none;
+}
+
+.bg-img {
+    position: absolute;
+    z-index: -1;
+}
+.bg-top {
+    top: 0;
+}
+.bg-bottom {
+    bottom: 0;
+}
+
 /* TYPOGRAPHY */
+
 h1 {
     font-size: 3em;
     line-height: 1;
@@ -126,6 +147,7 @@ section {
     "ratings"
     "cards";
     gap: 3em;
+    margin-bottom: 2em;
 }
 
 .section__text {
@@ -135,6 +157,14 @@ section {
 /* QUERIES */
 
 @media(min-width: 1000px) {
+
+    .bg-desktop {
+        display: inline;
+    }
+    .bg-mobile {
+        display: none;
+    }
+
     section {
         grid-template-columns: 1fr 2fr;
         grid-template-areas: 
