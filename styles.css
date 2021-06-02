@@ -27,7 +27,9 @@
 
 body {
     padding: 4em 1em;
+    min-height: 100vh;
     font-size: .9375rem;
+    line-height: 1.5;
     font-family: 'Spartan', Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: var(--white);
@@ -71,14 +73,15 @@ blockquote {
 /* COMPONENTS */
 
 .ratings {
-    display: flex;
-    flex-flow: column wrap;
+    grid-area: ratings;
+    display: grid;
+    align-items: center;
     gap: 1em;
 }
 .rating {
     background-color: var(--light-grayish-magenta);
     border-radius: 10px;
-    padding: 1em;
+    padding: 1.2em;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -91,14 +94,15 @@ blockquote {
 }
 
 .cards {
+    grid-area: cards;
     display: flex;
     flex-flow: column wrap;
-    gap: 1em;
+    gap: 1.5em;
 }
 .card {
     color: white;
     background-color: var(--dark-magenta);
-    padding: 1.5em;
+    padding: 3em 2em;
     text-align: left;
     border-radius: 10px;
 }
@@ -115,8 +119,53 @@ blockquote {
 /* SITE LAYOUT */
 
 section {
+    max-width: 1500px;
     display: grid;
+    grid-template-areas: 
+    "main-text"
+    "ratings"
+    "cards";
     gap: 3em;
 }
 
+.section__text {
+    grid-area: main-text;
+}
+
 /* QUERIES */
+
+@media(min-width: 1000px) {
+    section {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+        "main-text ratings"
+        "cards cards";
+        text-align: left;
+        /* column-gap: 5em; */
+    }
+    .ratings {
+        justify-content: center;
+    }
+    .rating {
+        justify-content: start;
+        gap: 3em;
+        padding-left: 3em;
+        padding-right: 5em;
+    }
+    .rating:nth-child(1) {
+        transform: translateX(-6em);
+    }
+    .rating:nth-child(2){
+        transform: translateX(-3em);
+    }
+
+    .cards {
+        flex-flow: row nowrap;
+    }
+    .card:nth-child(2) {
+        transform: translateY(1em);
+    }
+    .card:nth-child(3) {
+        transform: translateY(2em);
+    }
+}
