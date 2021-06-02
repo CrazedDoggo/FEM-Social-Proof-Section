@@ -7,3 +7,38 @@
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+/* GENERAL */
+
+:root {
+    --dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: .9375rem;
+    font-family: 'Spartan', Arial, Helvetica, sans-serif;
+    background-color: var(--white);
+    color: var(--dark-grayish-magenta);
+}
+
+/* TYPOGRAPHY */
+
+h1, strong {
+    color: var(--dark-magenta);
+}
+
+/* COMPONENTS */
+
+
+/* LAYOUT */
